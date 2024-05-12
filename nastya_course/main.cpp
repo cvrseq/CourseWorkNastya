@@ -1,5 +1,7 @@
 #include "library.h"
 int main() {
+    University::decrypt("data.enc", "data.txt");
+
     University uni;
     uni.loadStudents("data.txt");
 
@@ -14,6 +16,8 @@ int main() {
     std::cin >> option;
 
     uni.printFilteredStudents(std::cout, outputFile, option);
+
+    University::encrypt("data.txt", "data.enc");
 
     outputFile.close();
     return 0;

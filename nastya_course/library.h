@@ -40,5 +40,9 @@ public:
     void loadStudents(const std::string &filename);
 
     void printFilteredStudents(std::ostream &console, std::ostream &file, int option);
+
+    static void encrypt (const std::string filenameIn, const std::string filenameOut);
+
+    static void decrypt (const std::string filenameIn, const std::string filenameOut);
 };
 #endif
